@@ -7,10 +7,16 @@
 ### Prerequisites
 Before running the notebook, make sure you have the following installed:
 
+Make sure to have the following locally, 
+
+Installed python3
+
 - Python (3.x recommended)
 - Jupyter Notebook
 - MySQL (Make sure the MySQL server is running)
 ### Setup Steps
+
+You can also upload the notebook into ```colab``` or ```Anaconda```
 
 #### Install Dependencies:
 
