@@ -2,17 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Data App</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Health Care | Patients</title>
 </head>
 <body>
-    <h1>Healthcare Data App</h1>
-    <form action="/execute_query" method="post">
-        <label for="user_query">Enter SQL Query:</label>
-        <textarea name="user_query" id="user_query" rows="4" cols="50"></textarea>
-        <br>
-        <input type="submit" value="Execute Query">
-    </form>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Home</a>
+            <a class="navbar-brand" href="{{ url_for('function1') }}">Clean Data</a>
+            <a class="navbar-brand" href="{{ url_for('function2') }}">Insert Data to Mysql</a>
+            <a class="navbar-brand" href="{{ url_for('function3') }}">Create Stored Procedures</a>
+            <a class="navbar-brand" href="{{ url_for('function4') }}">Query the database</a>
+
+
+            <!-- Add links for other functions -->
+        </div>
+    </nav>
+
+    <!-- About section -->
+    
+
+    <!-- Carousel section (optional) -->
+    <div class="container mt-5">
+        <!-- Bootstrap carousel code here -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='image1.jpg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='image2.jpg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='image3.jpg') }}" class="d-block w-100" alt="...">
+                </div>
+                <!-- Add more carousel items as needed -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h2>About</h2>
+        <p>
+            The application revolves around managing and analyzing healthcare workforce data, specifically focusing on Health Professional Shortage Areas (HPSAs) and Medically Underserved Areas (MUAs).
+            <!-- Add more about information here -->
+        </p>
+    </div>
+    
+
+    <!-- Include Bootstrap JS and other scripts if needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
